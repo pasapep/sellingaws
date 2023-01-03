@@ -3,12 +3,16 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  fetch ("http://localhost:3000/comments")
+  .then (resp => resp.json())
+  .then (data => console.log(data))
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Hello from V2</h1>
-      </header>
+
+      <h1> Hello </h1>
     </div>
   );
 }
