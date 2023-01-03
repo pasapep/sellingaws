@@ -1,19 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, Switch, BrowserRouter } from "react-router-dom";// import Header from "./Header";
+import NavBar from"./NavBar"
+
+
 
 function App() {
 
-  fetch ("http://localhost:3000/comments")
-  .then (resp => resp.json())
-  .then (data => console.log(data))
+
 
 
   return (
+    <BrowserRouter>
     <div className="App">
+      <div> 
+        <h3> Retro Games </h3>
+      </div>
+      <NavBar />
 
       <h1> Hello </h1>
     </div>
+    </BrowserRouter>
   );
 }
 
